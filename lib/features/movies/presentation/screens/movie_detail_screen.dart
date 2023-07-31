@@ -277,7 +277,7 @@ class MovieDetailContent extends StatelessWidget {
                       ),
                     ),
                     errorWidget: (context, url, error) =>
-                        const Icon(Icons.error),
+                        const Icon(Icons.heart_broken),
                     height: 180.0,
                     fit: BoxFit.cover,
                   ),
