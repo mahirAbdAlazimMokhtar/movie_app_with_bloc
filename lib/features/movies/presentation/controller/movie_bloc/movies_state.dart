@@ -4,7 +4,8 @@ import 'package:movie_app_with_bloc/features/movies/domain/entities/movie.dart';
 
 class MoviesState extends Equatable {
   const MoviesState(
-      {this.nowPlayingMovies = const [],
+      {
+      this.nowPlayingMovies = const [],
       this.nowPlayingState = RequestState.loading,
       this.nowPlayingMessage = '',
       this.popularMessage = '',
@@ -12,7 +13,8 @@ class MoviesState extends Equatable {
       this.popularState = RequestState.loading,
       this.topRatedMessage = '',
       this.topRatedMovies = const [],
-      this.topRatedState = RequestState.loading});
+      this.topRatedState = RequestState.loading,
+      });
 
   //! Now Playing Movies
   final String nowPlayingMessage;
@@ -31,7 +33,8 @@ class MoviesState extends Equatable {
   //! copy with
 
   MoviesState copyWith(
-      {String? nowPlayingMessage,
+      {
+      String? nowPlayingMessage,
       List<Movie>? nowPlayingMovies,
       RequestState? nowPlayingState,
       String? popularMessage,
@@ -39,7 +42,8 @@ class MoviesState extends Equatable {
       RequestState? popularState,
       String? topRatedMessage,
       List<Movie>? topRatedMovies,
-      RequestState? topRatedState}) {
+      RequestState? topRatedState
+      }) {
     return MoviesState(
         nowPlayingMovies: nowPlayingMovies ?? this.nowPlayingMovies,
         nowPlayingMessage: nowPlayingMessage ?? this.nowPlayingMessage,
